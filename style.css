@@ -124,4 +124,55 @@ h6 {
 
 /* --------------------------------------------------------------------Bankist app DOM --------------------------------------------------------------------------- */
 
-/* ==========================================HEADER ====================================== */
+/* ========================================HEADER =================== */
+.header {
+    display: flex;
+    background-color: transparent;
+    height: 75px;
+    justify-content: center;
+    margin: 0 80px;
+    color: #444;
+}
+
+.header__column--1 {
+    display: flex;
+    flex: 50% 1 1;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 300;
+
+
+
+}
+
+.logo__container {}
+
+.logo__container img {
+    height: 45px;
+}
+
+
+.header__column--2 {
+    flex: 50% 1 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.col--2__flex {
+
+    font-size: 17px;
+    padding: 15px 20px;
+}
+
+.col--2__flex--1 {}
+
+.col--2__flex--2 {}
+
+.col--2__flex--3 {}
+
+.col--2__flex--4 {
+    background-image: linear-gradient(to top left, #39b385, #9be15d);
+    border-radius: 25px;
+}
