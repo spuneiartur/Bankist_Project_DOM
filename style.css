@@ -44,6 +44,7 @@ body {
     color: #666666;
     font-size: 15px;
     background-color: #fafafa;
+    overflow-x: hidden;
 }
 
 input,
@@ -96,6 +97,11 @@ h6 {
 
 /* ======================TECH CONTAINERS============================ */
 
+:root {
+    --color-primary: #5ec576;
+    --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
+    --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
+}
 
 ._container {
     max-width: 1250px;
@@ -120,6 +126,8 @@ h6 {
 
 .wrapper {
     min-height: 100vh;
+    max-width: 90%;
+    margin: auto;
 }
 
 /* --------------------------------------------------------------------Bankist app DOM --------------------------------------------------------------------------- */
@@ -130,8 +138,10 @@ h6 {
     background-color: transparent;
     height: 75px;
     justify-content: center;
-    margin: 0 80px;
+    margin: 10px 0px;
     color: #444;
+
+
 }
 
 .header__column--1 {
@@ -157,11 +167,13 @@ h6 {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    z-index: 2;
 
 }
 
 .col--2__flex {
-
+    justify-content: center;
+    align-items: center;
     font-size: 17px;
     padding: 15px 20px;
 }
@@ -175,4 +187,102 @@ h6 {
 .col--2__flex--4 {
     background-image: linear-gradient(to top left, #39b385, #9be15d);
     border-radius: 25px;
+}
+
+/* ========================================INTRO =================== */
+
+
+.intro {
+    display: flex;
+    margin: 90px;
+    position: relative;
+    padding-bottom: 70px;
+
+}
+
+.intro::after {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: 0px;
+    left: -50%;
+    width: 200%;
+    height: 0.5px;
+    background-color: rgb(234, 232, 232);
+}
+
+.intro__column--1 {
+    flex: 60% 1 1;
+}
+
+.intro__title {
+    font-size: 55px;
+    color: #444;
+}
+
+.intro__title h2 {
+    font-weight: 600;
+    line-height: 65px;
+}
+
+.highlight {
+    position: relative;
+    z-index: 1;
+
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    opacity: 0.7;
+    background-image: var(--gradient-primary);
+    transform: scale(1.05, 1.07) skewX(-15deg);
+}
+
+.intro__subtitle {
+    margin: 45px 0;
+    font-size: 24px;
+    color: #444;
+
+}
+
+.intro__subtitle h3 {
+    font-weight: 400;
+
+}
+
+.intro__link {
+    position: relative;
+    color: #444;
+    font-size: 17px;
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.intro__link::after {
+    position: absolute;
+    content: '';
+    height: 0.5px;
+    background-color: var(--color-primary);
+    width: 100%;
+    left: 0;
+    bottom: -3px;
+}
+
+.intro__column--2 {
+    flex: 40% 1 1;
+}
+
+.intro__column--2 img {
+    width: 100%;
+    height: auto;
+    z-index: 1;
+
+    transform: translateY(-50px);
 }
