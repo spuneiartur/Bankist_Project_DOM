@@ -130,7 +130,7 @@ h6 {
     margin: auto;
 }
 
-/* --------------------------------------------------------------------Bankist app DOM --------------------------------------------------------------------------- */
+/* -------------------------------------Bankist app DOM-------------- */
 
 /* ========================================HEADER =================== */
 .header {
@@ -282,12 +282,47 @@ h6 {
 
 .intro__column--2 img {
     width: 100%;
-    height: auto;
+    object-fit: cover;
     z-index: 1;
-
     transform: translateY(-50px);
 }
 
+@media (max-width: 969px) {
+    .section {
+        margin: 90px 30px;
+    }
+}
+
+@media (max-width: 800px) {
+    .intro__column--2 img {
+        transform: translate(-35px, 0px)
+    }
+
+    .section {
+        margin: 90px 0;
+    }
+
+}
+
+@media (max-width: 696px) {
+    .intro__column--2 {
+        display: none;
+    }
+
+    .intro__column--1 {
+        flex: 1 1 100%;
+    }
+
+
+}
+
+
+@media (max-width: 550px) {
+
+    .section {
+        margin: 90px 30px 0 30px;
+    }
+}
 
 /* ============================Section FEATURES===================== */
 
@@ -297,14 +332,16 @@ h6 {
     padding-top: 50px;
 }
 
-.features__grid--container {
+.section__grid--container {
     display: grid;
     grid-template: minmax(20px, 40px) minmax(105px, auto) 1fr / 1fr 1fr;
     grid-template-areas: 'title title' 'subtitle subtitle' 'content content';
 
 }
 
-.features__section--title {
+.features__grid--container {}
+
+.section__title {
     font-size: 18px;
     color: #5ec576;
     grid-area: title;
@@ -313,13 +350,13 @@ h6 {
     letter-spacing: 0.3px;
 }
 
-.features__section--title h2 {
+.section__title h2 {
     font-weight: 700;
 
 }
 
-.features__section--subtitle,
-.features__section--subtitle h3 {
+.section__subtitle,
+.section__subtitle h3 {
     font-size: 40px;
     color: #444444;
     grid-area: subtitle;
@@ -336,7 +373,6 @@ h6 {
     display: flex;
     min-height: 350px;
     margin-bottom: 35px;
-
 
 }
 
@@ -406,3 +442,30 @@ h6 {
     line-height: 35px;
     font-weight: 100;
 }
+
+@media (max-width: 596px) {
+    .features__flex--container {
+        flex-direction: column;
+
+    }
+
+    .features__img--container {
+        margin-bottom: 250px;
+    }
+
+    .features__flex--columns {
+        align-items: center;
+        justify-content: center;
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .features__icons {
+        transform: translateX(-50%);
+    }
+
+}
+
+
+/* ===================OPERATIONS SECTION============================ */
