@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
+    <script src="https://kit.fontawesome.com/7453df46f4.js" crossorigin="anonymous"></script>
     <script deref src="./script.js"></script>
     <title>Bankist - DOM</title>
   </head>
@@ -29,7 +30,7 @@
           <div class="col--2__flex col--2__flex--4">Open Account</div>
         </div>
       </header>
-      <section class="intro">
+      <section class="intro section">
         <div class="intro__column--1">
           <div class="intro__title">
             <h2>
@@ -46,26 +47,68 @@
           <img src="./img/hero.png" alt="background_image" />
         </div>
       </section>
-      <section class="features">
+      <section class="features section">
         <div class="features__grid--container">
-          <div class="features__section--title">features</div>
+          <div class="features__section--title"><h2>features</h2></div>
           <div class="features__section--subtitle">
-            Everything you need in a modern bank and more.
+            <h3>Everything you need in a modern bank and more.</h3>
           </div>
-          <div class="features__flex--container">
-            <div class="features__img--container">
-              <img src="" alt="">
-            </div>
             <div class="features__content--container">
-              <div class="features__icon--container">
-                <img src="" alt="">
+              <div class="features__flex--container">
+                <div class="features__img--container features__flex--columns">
+                  <img  
+                  src="img/digital-lazy.jpg"
+                  data-src="img/digital.jpg"
+                  alt="Computer"
+                  class="features__img lazy-img">
+                </div>
+                <div class="features__content features__flex--columns">
+                  <div class="features__icon--container">
+                    <i class="fa-solid fa-tv features__icons"></i>
+                  </div>
+                  <div class="features__content--title">100% digital bank</div>
+                  <div class="features__content--subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, animi? Accusamus, similique repellat omnis adipisci qui recusandae corporis rerum hic.
+
+                  </div>
+                </div>
               </div>
-              <div class="features__content--title">100% digital bank</div>
-              <div class="features__content--subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, animi? Accusamus, similique repellat omnis adipisci qui recusandae corporis rerum hic.
-                
+              <div class="features__flex--container features__flex--container-reverse">
+                <div class="features__img--container features__flex--columns">
+                  <img  
+                  src="/img/grow-lazy.jpg"
+                  data-src="img/grow.jpg"
+                  alt="Plant"
+                  class="features__img lazy-img">
+                </div>
+                <div class="features__content features__flex--columns">
+                  <div class="features__icon--container">
+                    <i class="fa-solid fa-arrow-trend-up features__icons"></i>
+                  </div>
+                  <div class="features__content--title">Watch your money grow</div>
+                  <div class="features__content--subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, animi? Accusamus, similique repellat omnis adipisci qui recusandae corporis rerum hic.
+
+                  </div>
+                </div>
+              </div>
+              <div class="features__flex--container">
+                <div class="features__img--container features__flex--columns">
+                  <img  
+                  src="img/card-lazy.jpg"
+                  data-src="img/card.jpg"
+                  alt="Computer"
+                  class="features__img lazy-img">
+                </div>
+                <div class="features__content features__flex--columns">
+                  <div class="features__icon--container">
+                    <i class="fa-solid fa-tv features__icons"></i>
+                  </div>
+                  <div class="features__content--title">Free debit card included</div>
+                  <div class="features__content--subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, animi? Accusamus, similique repellat omnis adipisci qui recusandae corporis rerum hic.
+
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
           </div>
         </div>
       </section>
