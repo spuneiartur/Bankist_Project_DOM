@@ -45,6 +45,7 @@ body {
     font-size: 15px;
     background-color: #f3f3f3;
     overflow-x: hidden;
+
 }
 
 input,
@@ -319,6 +320,23 @@ h6 {
 
 @media (max-width: 550px) {
 
+    .intro__title h2 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .intro__subtitle {
+
+        font-size: 18px;
+        text-align: center;
+
+    }
+
+    .intro__link {
+        font-size: 16px;
+        text-align: center;
+    }
+
     .section {
         margin: 90px 30px 0 30px;
     }
@@ -469,3 +487,146 @@ h6 {
 
 
 /* ===================OPERATIONS SECTION============================ */
+
+
+.operations {}
+
+
+
+
+.section__title {}
+
+.section__subtitle {}
+
+.operations__content--container {
+    margin: 120px auto;
+    width: 90%;
+    background-color: #ffffff;
+    padding: 10px 50px 60px 50px;
+    box-shadow: 1px 1px 1px 1px rgb(228, 228, 228);
+}
+
+.operations__tab--container-grid {
+    display: grid;
+    margin: 0 auto;
+    grid-template: 1fr / repeat(3, 1fr);
+    justify-items: center;
+    width: 80%;
+    transform: translateY(-35px);
+}
+
+.operations__tab {
+    display: flex;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 14.5px 40px;
+    border-radius: 40px;
+    transition: all 1s;
+
+
+}
+
+
+.operations__tab--active {
+    transform: translateY(-10px);
+
+}
+
+
+
+.operations__tab-1 {
+    background-color: #FFCB03;
+}
+
+.oper__tab--no {
+    margin: 0 10px 0 0;
+}
+
+.oper__tab--text {
+    font-weight: 500;
+}
+
+.operations__tab-2 {
+    background-color: #5EC576;
+}
+
+.operations__tab-3 {
+    background-color: #FF585F;
+}
+
+/*  ------------------------------------------Hover on tabs animation */
+.operations__tab-1:hover {
+    background-color: #e3b704;
+}
+
+.operations__tab-2:hover {
+    background-color: #46a05b;
+}
+
+.operations__tab-3:hover {
+    background-color: #d44a51;
+}
+
+.operations__content--container-grid {
+    display: none;
+}
+
+.operations__content--container-grid-1 {}
+
+.operations__icon--container {
+    grid-column: 1;
+    justify-self: center;
+    align-self: center;
+}
+
+.fa-arrow-up-from-bracket {}
+
+.operations__icon {
+    color: #FFBB00;
+    padding: 20px;
+    font-size: 27.5px;
+    background-color: #FFF5CF;
+    border-radius: 50%;
+}
+
+.operations__title--container {
+    grid-column: 2;
+}
+
+.operations__title {
+    color: #444444;
+    font-size: 24.5px;
+    font-weight: 500;
+    line-height: 1.9;
+}
+
+.operations__subtitle--container {
+    grid-column: 2;
+}
+
+.operations__subtitle,
+.operations__subtitle h3 {
+    color: #666;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 32px;
+    letter-spacing: 0.2px;
+}
+
+.operations__content--container-grid-2 {}
+
+.operations__content--container-grid-3 {}
+
+.operations__content--container-grid--active {
+    display: grid;
+    grid-template: minmax(70px, 120px) 1fr / 70px 1fr;
+    align-items: center;
+    row-gap: 10px;
+    column-gap: 35px;
+    width: 90%;
+    margin: 0 auto;
+
+
+}
