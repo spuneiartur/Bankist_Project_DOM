@@ -134,6 +134,15 @@ h6 {
     margin: auto;
 }
 
+.section--hidden {
+    opacity: 0;
+    transform: translateY(5rem);
+}
+
+.lazy-img {
+    filter: blur(10px);
+}
+
 /* -------------------------------------Bankist app DOM-------------- */
 
 /* ========================================HEADER =================== */
@@ -183,23 +192,32 @@ h6 {
     padding: 15px 20px;
 }
 
-.col--2__flex--1 {}
+.col--2__flex--1:hover {
+    transform: scale(1.1) translateY(-0.2rem);
+}
 
-.col--2__flex--2 {}
+.col--2__flex--2:hover {
+    transform: scale(1.1) translateY(-0.2rem);
+}
 
-.col--2__flex--3 {}
+.col--2__flex--3:hover {
+    transform: scale(1.1) translateY(-0.2rem);
+}
 
 .col--2__flex--4 {
     background-image: linear-gradient(to top left, #39b385, #9be15d);
     border-radius: 25px;
 }
 
-/* ========================================INTRO =================== */
+
+
+/* ======================================== INTRO ================================= */
 
 .section {
     margin: 90px;
     padding-bottom: 130px;
     position: relative;
+    transition: all 1s;
 }
 
 .intro {
