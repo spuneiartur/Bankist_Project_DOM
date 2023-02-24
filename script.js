@@ -85,6 +85,74 @@ operationsTabs.forEach(tab => {
 // ------------------------------------------- Slider -------------------------------------------
 const sliderBtnRight = document.querySelector('.slider__btn--1');
 const sliderBtnLeft = document.querySelector('.slider__btn--2');
+const slides = document.querySelectorAll('.testimonial__slide');
+const dotsContainer = document.querySelector('.slider__dots--container');
+const dotBtns = document.querySelectorAll('.slider__dot');
+
+// Functions -----------
+const decativateAllDots = function (dotBtns) {
+  dotBtns.forEach(btn => btn.classList.remove('slider__dot--active'));
+};
+const activateDot = function (element) {
+  element.classList.add('slider__dot--active');
+};
+
+const nextSlide = function () {
+  slides.forEach(slide => {
+    if (slide.dataset.index - 200 === -650) {
+      slide.style.transform = `translateX(-50%)`;
+      slide.dataset.index = '-50';
+    } else {
+      slide.style.transform = `translateX(${slide.dataset.index - 200}%)`;
+      slide.dataset.index = `${slide.dataset.index - 200}`;
+    }
+  });
+};
+
+const previousSlide = function () {
+  slides.forEach(slide => {
+    if (Number(slide.dataset.index) + 200 === 550) {
+      slide.style.transform = `translateX(-50%)`;
+      slide.dataset.index = '-50';
+    } else {
+      slide.style.transform = `translateX(${
+        Number(slide.dataset.index) + 200
+      }%)`;
+      slide.dataset.index = `${Number(slide.dataset.index) + 200}`;
+    }
+  });
+};
+
+const goToSlide = function (index, currentIndex) {
+  if (index > currentIndex) {
+    while (currentIndex !== index) {
+      nextSlide();
+      currentIndex++;
+    }
+  } else if (index < currentIndex) {
+    while (currentIndex !== index) {
+      previousSlide();
+      currentIndex--;
+    }
+  }
+};
 
 // Adding event handler for arrow buttons
-sliderBtnLeft.addEventListener('click', function (e) {});
+sliderBtnRight.addEventListener('click', function (e) {
+  nextSlide();
+});
+
+sliderBtnLeft.addEventListener('click', function (e) {
+  previousSlide();
+});
+
+// Adding event handler for dot buttons
+
+dotsContainer.addEventListener('click', function (e) {
+  e.preventDefault();
+  const clicked = e.target.closest('.slider__dot');
+  console.log(clicked);
+  if (!clicked) return;
+  decativateAllDots(dotBtns);
+  activateDot(clicked);
+});
